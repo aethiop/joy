@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE Framework - Examples Index</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../layout.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero {
+            text-align: center;
+            padding: 3em 0;
+        }
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2em;
+            margin-top: 3em;
+        }
+        .example-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2em;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+        .example-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .example-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5em;
+            font-size: 1.5em;
+        }
+        .example-card .tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.25em 0.75em;
+            border-radius: 999px;
+            font-size: 0.75em;
+            margin-right: 0.5em;
+            margin-bottom: 0.5em;
+        }
+        .tag.new {
+            background: #22c55e;
+        }
+        .tag.framework {
+            background: #f59e0b;
+        }
+        .docs-section {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2em;
+            margin-top: 3em;
+            color: white;
+        }
+        .docs-link {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1 style="color: white; font-size: 3em; margin-bottom: 0.2em;">THE Framework</h1>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.5em; margin-bottom: 0;">
+                The Anti-Monopoly Game Engine for the Web
+            </p>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1em;">
+                Security-focused | Zero Dependencies | Reactive State | WebGL Support
+            </p>
+        </div>
+
+        <div class="examples-grid">
+            <!-- New CSS Examples -->
+            <a href="css-utilities.html" class="example-card">
+                <span class="tag new">NEW</span>
+                <h3>🎨 CSS Utilities Demo</h3>
+                <p>
+                    Comprehensive showcase of all new CSS utility classes including flexbox,
+                    spacing, colors, typography, borders, shadows, and animations.
+                </p>
+                <ul style="margin-top: 1em; text-align: left; color: #666;">
+                    <li>✓ 500+ utility classes</li>
+                    <li>✓ Flexbox & Grid layouts</li>
+                    <li>✓ Responsive design</li>
+                    <li>✓ Pre-built components</li>
+                </ul>
+            </a>
+
+            <a href="css-showcase.html" class="example-card">
+                <span class="tag new">NEW</span>
+                <span class="tag framework">Framework</span>
+                <h3>🚀 CSS + JavaScript Integration</h3>
+                <p>
+                    Advanced demo showing THE framework's JavaScript API with new CSS properties:
+                    opacity, border-radius, box-shadow, and borders.
+                </p>
+                <ul style="margin-top: 1em; text-align: left; color: #666;">
+                    <li>✓ Animated components</li>
+                    <li>✓ JavaScript CSS control</li>
+                    <li>✓ Real-time effects</li>
+                    <li>✓ Complex animations</li>
+                </ul>
+            </a>
+
+            <!-- Original Examples -->
+            <a href="1-hello-world.html" class="example-card">
+                <span class="tag">Tutorial</span>
+                <h3>👋 Hello World</h3>
+                <p>
+                    The simplest possible THE framework example. Start here to understand
+                    the basic structure and how the.view works.
+                </p>
+            </a>
+
+            <a href="2-hello-player.html" class="example-card">
+                <span class="tag">Tutorial</span>
+                <h3>👤 Hello Player</h3>
+                <p>
+                    Learn about persistent state with the.player. Data automatically saves
+                    to localStorage and persists across page reloads.
+                </p>
+            </a>
+
+            <a href="toy.html" class="example-card">
+                <span class="tag framework">Framework</span>
+                <h3>🎮 Code from Phone</h3>
+                <p>
+                    The main THE framework demo - a visual code editor and game that runs
+                    entirely in your browser with full security isolation.
+                </p>
+            </a>
+
+            <a href="physics/" class="example-card">
+                <span class="tag framework">Advanced</span>
+                <h3>⚛️ Physics Simulations</h3>
+                <p>
+                    9 interactive physics demos including trigonometry, vectors, acceleration,
+                    gravity, and friction. WebGL-powered animations.
+                </p>
+            </a>
+
+            <a href="chess/original.html" class="example-card">
+                <span class="tag">Game</span>
+                <h3>♟️ Chess Game</h3>
+                <p>
+                    Full chess implementation demonstrating complex state management,
+                    game logic, and interactive UI with THE framework.
+                </p>
+            </a>
+
+            <a href="chess/senterej.html" class="example-card">
+                <span class="tag">Game</span>
+                <h3>🎲 Senterej</h3>
+                <p>
+                    Ethiopian chess variant showcasing cultural game adaptations and
+                    custom rule implementations.
+                </p>
+            </a>
+        </div>
+
+        <!-- Documentation Section -->
+        <div class="docs-section">
+            <h2 style="font-size: 2em; margin-bottom: 0.5em;">📚 Documentation</h2>
+            <p style="font-size: 1.1em; margin-bottom: 1em;">
+                Complete guides for understanding and extending THE framework:
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em;">
+                <div>
+                    <h3 style="margin-bottom: 0.5em;">📖 Framework Guide</h3>
+                    <p>Complete API reference, core concepts, examples, and best practices.</p>
+                    <a href="../FRAMEWORK_GUIDE.md" class="docs-link">Read Framework Guide →</a>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 0.5em;">🎨 CSS Enhancement Guide</h3>
+                    <p>Step-by-step guide for adding new CSS utilities and integrating with the rendering engine.</p>
+                    <a href="../CSS_ENHANCEMENT_GUIDE.md" class="docs-link">Read CSS Guide →</a>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 0.5em;">📝 README</h3>
+                    <p>Quick start guide and installation instructions.</p>
+                    <a href="../README.md" class="docs-link">Read README →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div style="margin-top: 3em; text-align: center; color: white;">
+            <h2 style="font-size: 2em; margin-bottom: 1em;">✨ New CSS Features</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5em; text-align: left;">
+                <div>
+                    <h4 style="font-size: 1.2em; margin-bottom: 0.5em;">🎯 CSS Variables</h4>
+                    <ul>
+                        <li>Theme colors</li>
+                        <li>Spacing scale</li>
+                        <li>Typography system</li>
+                        <li>Transitions</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 1.2em; margin-bottom: 0.5em;">📦 Layout</h4>
+                    <ul>
+                        <li>Flexbox utilities</li>
+                        <li>Grid system</li>
+                        <li>Spacing scale</li>
+                        <li>Alignment helpers</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 1.2em; margin-bottom: 0.5em;">🎨 Styling</h4>
+                    <ul>
+                        <li>Color utilities</li>
+                        <li>Border & radius</li>
+                        <li>Shadows</li>
+                        <li>Typography</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 1.2em; margin-bottom: 0.5em;">🎭 Components</h4>
+                    <ul>
+                        <li>Buttons</li>
+                        <li>Cards</li>
+                        <li>Loading indicators</li>
+                        <li>Animations</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 1.2em; margin-bottom: 0.5em;">⚡ JavaScript API</h4>
+                    <ul>
+                        <li>opacity property</li>
+                        <li>radius property</li>
+                        <li>shadow property</li>
+                        <li>border property</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 1.2em; margin-bottom: 0.5em;">📱 Responsive</h4>
+                    <ul>
+                        <li>Breakpoint utilities</li>
+                        <li>Mobile-first</li>
+                        <li>Reduced motion</li>
+                        <li>Accessibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="margin-top: 4em; padding-top: 2em; border-top: 2px solid rgba(255,255,255,0.2); text-align: center; color: rgba(255,255,255,0.8);">
+            <p style="font-size: 1em;">
+                THE Framework • Security-Focused Rendering Engine • Zero Runtime Dependencies
+            </p>
+            <p style="font-size: 0.9em; margin-top: 0.5em;">
+                Dev Server Running at <strong>http://localhost:8764/</strong>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        console.log('🎉 THE Framework Examples Index');
+        console.log('📍 Server: http://localhost:8764/');
+        console.log('');
+        console.log('🆕 New Examples:');
+        console.log('  • css-utilities.html - CSS utility classes demo');
+        console.log('  • css-showcase.html - JavaScript + CSS integration');
+        console.log('');
+        console.log('📚 Documentation:');
+        console.log('  • FRAMEWORK_GUIDE.md - Complete API reference');
+        console.log('  • CSS_ENHANCEMENT_GUIDE.md - How to extend CSS');
+        console.log('');
+        console.log('✅ All examples are ready to explore!');
+    </script>
+</body>
+</html>

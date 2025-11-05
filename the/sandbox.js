@@ -244,7 +244,7 @@ function the(){ // THIS CODE RUNS INSIDE THE WEBWORKER!
     up.s.push(msg);
     return a;
   };
-  var go = {name:1, size:1, turn:1, grab:1, zoom:1, warp:1, fill:1, away:1, drip:1, flow:1, unit: 1};
+  var go = {name:1, size:1, turn:1, grab:1, zoom:1, warp:1, fill:1, away:1, drip:1, flow:1, unit: 1, opacity: 1, shadow: 1, radius: 1, border: 1};
   place.ing = {get: function(at,has,put){
     if(place[has]){ return at[has] || place(at)[has] }
     return at[has];
@@ -555,6 +555,34 @@ setInterval(breathe,0);
     }
     if(change.t){
       tmp = what.style.transform = "translate3d("+what.grab.join(place[what.unit.grab[0]] + ",")+") rotateZ("+what.turn[0]+"turn) " + "rotateX("+what.turn[1]+"turn) " + "rotateY("+what.turn[2]+"turn) scale3d("+what.zoom+")";
+    }
+    // Enhanced CSS properties integration
+    if(u !== (put = change.opacity)){
+      what.style.opacity = put;
+    }
+    if(u !== (put = change.radius)){
+      // radius can be a number (applies to all corners) or array [topLeft, topRight, bottomRight, bottomLeft]
+      if(Array.isArray(put)){
+        what.style.borderRadius = put.map(function(v){ return v+'em' }).join(' ');
+      } else {
+        what.style.borderRadius = put+'em';
+      }
+    }
+    if(u !== (put = change.shadow)){
+      // shadow format: [offsetX, offsetY, blur, spread, r, g, b, a] or CSS string
+      if(Array.isArray(put) && put.length >= 8){
+        what.style.boxShadow = put[0]+'px '+put[1]+'px '+put[2]+'px '+put[3]+'px rgba('+(put[4]*100)+'%,'+(put[5]*100)+'%,'+(put[6]*100)+'%,'+put[7]+')';
+      } else if(typeof put === 'string'){
+        what.style.boxShadow = put;
+      }
+    }
+    if(u !== (put = change.border)){
+      // border format: [width, r, g, b, a] or CSS string
+      if(Array.isArray(put) && put.length >= 5){
+        what.style.border = put[0]+'px solid rgba('+(put[1]*100)+'%,'+(put[2]*100)+'%,'+(put[3]*100)+'%,'+put[4]+')';
+      } else if(typeof put === 'string'){
+        what.style.border = put;
+      }
     }
   }
 

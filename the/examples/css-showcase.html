@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE Framework - CSS Showcase</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../layout.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <script class="SecureRender" src="../content.js">
+        // CSS SHOWCASE - Demonstrating all new CSS features
+
+        // Container with flexbox layout
+        var container = the.view({
+            name: 'container',
+            html: 'div',
+            size: [[50, '~'], [auto, '~']],
+            fill: [1, 1, 1, 1]
+        })
+        container.into(the.view)
+
+        // Title with enhanced styling
+        var title = the.view({
+            name: 'title',
+            html: 'div',
+            fill: 'THE Framework CSS Showcase',
+            size: [[40, '~'], [3, '~']],
+            opacity: 1,
+            radius: 0.5,
+            shadow: [0, 4, 15, 0, 0.4, 0.5, 0.9, 0.3]
+        })
+        title.into(container)
+
+        // Section 1: Color Utilities Demo
+        var section1 = the.view({
+            name: 'section1',
+            html: 'div',
+            size: [[45, '~'], [auto, '~']],
+            fill: [0.98, 0.98, 0.98, 1]
+        })
+        section1.into(container)
+
+        var heading1 = the.view({
+            name: 'heading1',
+            fill: 'Color Utilities',
+            size: [1.5, 1.5, 1]
+        })
+        heading1.into(section1)
+
+        // Primary button
+        var btnPrimary = the.view({
+            name: 'btnPrimary',
+            html: 'div',
+            fill: 'Primary Button',
+            size: [[12, '~'], [2.5, '~']],
+            opacity: 1,
+            radius: 0.25,
+            shadow: [0, 2, 8, 0, 0, 0, 0, 0.15]
+        })
+        btnPrimary.into(section1)
+
+        // Animate on hover (simulated with periodic updates)
+        var hoverState = 0
+        setInterval(function() {
+            hoverState = (hoverState + 1) % 100
+            if (hoverState < 50) {
+                btnPrimary.shadow = [0, 2, 8, 0, 0, 0, 0, 0.15]
+                btnPrimary.grab = [0, 0, 0]
+            } else {
+                btnPrimary.shadow = [0, 6, 20, 0, 0, 0, 0, 0.3]
+                btnPrimary.grab = [0, -0.2, 0]
+            }
+        }, 100)
+
+        // Section 2: Card Components
+        var section2 = the.view({
+            name: 'section2',
+            html: 'div',
+            size: [[45, '~'], [auto, '~']],
+            fill: [0.98, 0.98, 0.98, 1]
+        })
+        section2.into(container)
+
+        var heading2 = the.view({
+            name: 'heading2',
+            fill: 'Card Component',
+            size: [1.5, 1.5, 1]
+        })
+        heading2.into(section2)
+
+        var card = the.view({
+            name: 'card',
+            html: 'div',
+            size: [[20, '~'], [12, '~']],
+            fill: [1, 1, 1, 1],
+            radius: 0.5,
+            shadow: [0, 4, 6, -1, 0, 0, 0, 0.1],
+            border: [4, 0.23, 0.51, 0.96, 1] // Blue border
+        })
+        card.into(section2)
+
+        var cardTitle = the.view({
+            name: 'cardTitle',
+            fill: 'Interactive Card',
+            size: [1.2, 1.2, 1]
+        })
+        cardTitle.into(card)
+
+        var cardBody = the.view({
+            name: 'cardBody',
+            fill: 'This card demonstrates the new CSS properties including shadows, borders, and border radius.',
+            size: [0.9, 0.9, 1]
+        })
+        cardBody.into(card)
+
+        // Animate card
+        var cardTime = 0
+        setInterval(function() {
+            cardTime += 0.05
+            var hover = Math.sin(cardTime) * 0.5 + 0.5
+
+            card.shadow = [0, 4 + hover * 10, 6 + hover * 14, -1, 0, 0, 0, 0.1 + hover * 0.15]
+            card.grab = [0, -hover * 0.3, 0]
+        }, 50)
+
+        // Section 3: Loading Indicators
+        var section3 = the.view({
+            name: 'section3',
+            html: 'div',
+            size: [[45, '~'], [auto, '~']],
+            fill: [0.98, 0.98, 0.98, 1]
+        })
+        section3.into(container)
+
+        var heading3 = the.view({
+            name: 'heading3',
+            fill: 'Loading Animations',
+            size: [1.5, 1.5, 1]
+        })
+        heading3.into(section3)
+
+        // Spinner
+        var spinner = the.view({
+            name: 'spinner',
+            html: 'div',
+            size: [[2, '~'], [2, '~']],
+            fill: [0, 0, 0, 0],
+            radius: 9999, // Full circle
+            border: [4, 0, 0, 0, 0.1]
+        })
+        spinner.into(section3)
+
+        // Animate spinner rotation
+        var spinTime = 0
+        setInterval(function() {
+            spinTime += 0.02
+            spinner.turn = [spinTime, 0, 0]
+        }, 16)
+
+        // Section 4: Opacity & Fade Effects
+        var section4 = the.view({
+            name: 'section4',
+            html: 'div',
+            size: [[45, '~'], [auto, '~']],
+            fill: [0.98, 0.98, 0.98, 1]
+        })
+        section4.into(container)
+
+        var heading4 = the.view({
+            name: 'heading4',
+            fill: 'Opacity Effects',
+            size: [1.5, 1.5, 1]
+        })
+        heading4.into(section4)
+
+        var fadeBox = the.view({
+            name: 'fadeBox',
+            html: 'div',
+            fill: 'Fading Element',
+            size: [[15, '~'], [3, '~']],
+            opacity: 1,
+            radius: 0.25,
+            shadow: [0, 2, 4, 0, 0.54, 0.36, 0.94, 0.5]
+        })
+        fadeBox.into(section4)
+
+        // Animate opacity
+        var fadeTime = 0
+        setInterval(function() {
+            fadeTime += 0.05
+            fadeBox.opacity = (Math.sin(fadeTime) * 0.4 + 0.6)
+        }, 50)
+
+        // Section 5: Advanced Shapes
+        var section5 = the.view({
+            name: 'section5',
+            html: 'div',
+            size: [[45, '~'], [auto, '~']],
+            fill: [0.98, 0.98, 0.98, 1]
+        })
+        section5.into(container)
+
+        var heading5 = the.view({
+            name: 'heading5',
+            fill: 'Border Radius Variations',
+            size: [1.5, 1.5, 1]
+        })
+        heading5.into(section5)
+
+        // Circle
+        var circle = the.view({
+            name: 'circle',
+            html: 'div',
+            size: [[3, '~'], [3, '~']],
+            fill: [0.13, 0.77, 0.37, 1],
+            radius: 9999
+        })
+        circle.into(section5)
+
+        // Rounded square
+        var roundedSquare = the.view({
+            name: 'roundedSquare',
+            html: 'div',
+            size: [[3, '~'], [3, '~']],
+            fill: [0.94, 0.27, 0.27, 1],
+            radius: 0.5
+        })
+        roundedSquare.into(section5)
+
+        // Pill shape
+        var pill = the.view({
+            name: 'pill',
+            html: 'div',
+            fill: 'Pill Button',
+            size: [[10, '~'], [2.5, '~']],
+            radius: 9999,
+            shadow: [0, 2, 8, 0, 0, 0, 0, 0.2]
+        })
+        pill.into(section5)
+
+        // Section 6: Combined Effects
+        var section6 = the.view({
+            name: 'section6',
+            html: 'div',
+            size: [[45, '~'], [auto, '~']],
+            fill: [0.98, 0.98, 0.98, 1]
+        })
+        section6.into(container)
+
+        var heading6 = the.view({
+            name: 'heading6',
+            fill: 'Combined Effects',
+            size: [1.5, 1.5, 1]
+        })
+        heading6.into(section6)
+
+        var combined = the.view({
+            name: 'combined',
+            html: 'div',
+            fill: 'Animated Box',
+            size: [[12, '~'], [12, '~']],
+            opacity: 1,
+            radius: 0.5,
+            shadow: [0, 10, 30, 0, 0.98, 0.75, 0.14, 0.5],
+            border: [2, 0.98, 0.75, 0.14, 1]
+        })
+        combined.into(section6)
+
+        // Complex animation combining multiple properties
+        var complexTime = 0
+        setInterval(function() {
+            complexTime += 0.03
+
+            // Rotate
+            combined.turn = [complexTime * 0.1, complexTime * 0.05, 0]
+
+            // Scale
+            var scale = 1 + Math.sin(complexTime) * 0.2
+            combined.zoom = [scale, scale, 1]
+
+            // Move
+            combined.grab = [
+                Math.sin(complexTime) * 2,
+                Math.cos(complexTime) * 2,
+                0
+            ]
+
+            // Change opacity
+            combined.opacity = 0.7 + Math.sin(complexTime * 2) * 0.3
+
+            // Change shadow
+            var shadowSize = 10 + Math.sin(complexTime) * 10
+            combined.shadow = [0, shadowSize, shadowSize * 3, 0, 0.98, 0.75, 0.14, 0.3 + Math.sin(complexTime) * 0.2]
+        }, 30)
+
+        // Footer
+        var footer = the.view({
+            name: 'footer',
+            html: 'div',
+            fill: 'THE Framework - Enhanced with comprehensive CSS utilities and JavaScript integration',
+            size: [[45, '~'], [2, '~']],
+            opacity: 0.7
+        })
+        footer.into(container)
+
+        console.log('✅ CSS Showcase loaded successfully!')
+        console.log('📦 New features:')
+        console.log('  - CSS Variables (colors, spacing, typography)')
+        console.log('  - Flexbox utilities')
+        console.log('  - Spacing scale system')
+        console.log('  - Color utilities')
+        console.log('  - Border & shadow utilities')
+        console.log('  - Advanced animations')
+        console.log('  - Button & card components')
+        console.log('  - JavaScript properties: opacity, radius, shadow, border')
+    </script>
+</body>
+</html>

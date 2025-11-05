@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE Framework - CSS Utilities Demo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../layout.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2em;
+        }
+        .demo-section {
+            background: white;
+            margin-bottom: 2em;
+            padding: 2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="pad center">
+        <h1 class="text-3xl font-bold text-primary mb-4">THE Framework CSS Utilities</h1>
+        <p class="text-lg mb-5">Comprehensive utility classes for rapid UI development</p>
+
+        <!-- Color Utilities Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Color Utilities</h2>
+
+            <div class="flex gap-2 mb-3 flex-wrap">
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-secondary">Secondary</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-danger">Danger</button>
+            </div>
+
+            <div class="flex gap-2 flex-wrap">
+                <div class="p-3 bg-primary text-white rounded">Primary BG</div>
+                <div class="p-3 bg-secondary text-white rounded">Secondary BG</div>
+                <div class="p-3 bg-success text-white rounded">Success BG</div>
+                <div class="p-3 bg-danger text-white rounded">Danger BG</div>
+            </div>
+        </div>
+
+        <!-- Flexbox Layout Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Flexbox Layout</h2>
+
+            <h3 class="text-xl font-semibold mb-2">Horizontal (justify-between)</h3>
+            <div class="flex justify-between items-center gap-2 p-3 bg-light rounded mb-3">
+                <div class="p-2 bg-primary text-white rounded">Item 1</div>
+                <div class="p-2 bg-secondary text-white rounded">Item 2</div>
+                <div class="p-2 bg-success text-white rounded">Item 3</div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-2">Vertical (flex-col)</h3>
+            <div class="flex flex-col gap-2 p-3 bg-light rounded mb-3">
+                <div class="p-2 bg-primary text-white rounded">Top</div>
+                <div class="p-2 bg-secondary text-white rounded">Middle</div>
+                <div class="p-2 bg-success text-white rounded">Bottom</div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-2">Centered (justify-center items-center)</h3>
+            <div class="flex justify-center items-center gap-2 p-3 bg-light rounded" style="min-height: 100px;">
+                <div class="p-2 bg-danger text-white rounded">Centered</div>
+            </div>
+        </div>
+
+        <!-- Spacing Scale Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Spacing Scale</h2>
+
+            <div class="bg-light p-3 rounded mb-3">
+                <div class="m-1 p-1 bg-primary text-white rounded">m-1 p-1 (0.25em)</div>
+                <div class="m-2 p-2 bg-primary text-white rounded">m-2 p-2 (0.5em)</div>
+                <div class="m-3 p-3 bg-primary text-white rounded">m-3 p-3 (1em)</div>
+            </div>
+
+            <div class="bg-light p-3 rounded">
+                <div class="mt-0 mb-0 p-2 bg-secondary text-white rounded">No vertical margin</div>
+                <div class="mt-3 mb-3 p-2 bg-secondary text-white rounded">Medium vertical margin</div>
+                <div class="mt-5 mb-5 p-2 bg-secondary text-white rounded">Large vertical margin</div>
+            </div>
+        </div>
+
+        <!-- Typography Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Typography</h2>
+
+            <div class="mb-3">
+                <div class="text-xs mb-1">Extra Small (text-xs)</div>
+                <div class="text-sm mb-1">Small (text-sm)</div>
+                <div class="text-base mb-1">Base (text-base)</div>
+                <div class="text-lg mb-1">Large (text-lg)</div>
+                <div class="text-xl mb-1">Extra Large (text-xl)</div>
+                <div class="text-2xl mb-1">2X Large (text-2xl)</div>
+                <div class="text-3xl mb-1">3X Large (text-3xl)</div>
+            </div>
+
+            <div class="mb-3">
+                <div class="font-light mb-1">Light Weight</div>
+                <div class="font-normal mb-1">Normal Weight</div>
+                <div class="font-medium mb-1">Medium Weight</div>
+                <div class="font-semibold mb-1">Semibold Weight</div>
+                <div class="font-bold mb-1">Bold Weight</div>
+            </div>
+
+            <div>
+                <div class="uppercase mb-1">uppercase text</div>
+                <div class="lowercase mb-1">LOWERCASE TEXT</div>
+                <div class="capitalize mb-1">capitalize text</div>
+            </div>
+        </div>
+
+        <!-- Borders & Shadows Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Borders & Shadows</h2>
+
+            <div class="flex gap-3 mb-3 flex-wrap">
+                <div class="p-3 border rounded-none">No Radius</div>
+                <div class="p-3 border rounded-sm">Small Radius</div>
+                <div class="p-3 border rounded">Medium Radius</div>
+                <div class="p-3 border rounded-lg">Large Radius</div>
+                <div class="p-3 border rounded-full">Full Radius</div>
+            </div>
+
+            <div class="flex gap-3 flex-wrap">
+                <div class="p-3 shadow-sm bg-white rounded">Shadow SM</div>
+                <div class="p-3 shadow bg-white rounded">Shadow</div>
+                <div class="p-3 shadow-md bg-white rounded">Shadow MD</div>
+                <div class="p-3 shadow-lg bg-white rounded">Shadow LG</div>
+                <div class="p-3 shadow-xl bg-white rounded">Shadow XL</div>
+            </div>
+        </div>
+
+        <!-- Card Components Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Card Components</h2>
+
+            <div class="flex gap-3 flex-wrap justify-center">
+                <div class="card card-primary hover-lift">
+                    <div class="card-header">Primary Card</div>
+                    <div class="card-body p-0">
+                        This is a primary card with hover lift effect.
+                        It has a blue top border.
+                    </div>
+                </div>
+
+                <div class="card card-success hover-lift">
+                    <div class="card-header">Success Card</div>
+                    <div class="card-body p-0">
+                        This is a success card with hover lift effect.
+                        It has a green top border.
+                    </div>
+                </div>
+
+                <div class="card card-danger hover-lift">
+                    <div class="card-header">Danger Card</div>
+                    <div class="card-body p-0">
+                        This is a danger card with hover lift effect.
+                        It has a red top border.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button Variations Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Button Variations</h2>
+
+            <div class="mb-3">
+                <h3 class="text-lg font-semibold mb-2">Sizes</h3>
+                <div class="flex gap-2 items-center flex-wrap">
+                    <button class="btn btn-primary btn-sm">Small</button>
+                    <button class="btn btn-primary">Default</button>
+                    <button class="btn btn-primary btn-lg">Large</button>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-2">States</h3>
+                <div class="flex gap-2 flex-wrap">
+                    <button class="btn btn-primary">Normal</button>
+                    <button class="btn btn-primary hover-grow">Hover Grow</button>
+                    <button class="btn btn-primary disabled">Disabled</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Indicators Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Loading Indicators</h2>
+
+            <div class="flex gap-4 items-center justify-center p-4">
+                <div class="spinner"></div>
+
+                <div class="loading-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <button class="btn btn-primary flex items-center gap-2">
+                    <div class="spinner" style="width: 1em; height: 1em; border-width: 2px;"></div>
+                    Loading...
+                </button>
+            </div>
+        </div>
+
+        <!-- Animations Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Animations</h2>
+
+            <div class="flex gap-3 flex-wrap justify-center">
+                <div class="p-3 bg-primary text-white rounded fade-in">Fade In</div>
+                <div class="p-3 bg-secondary text-white rounded scale-in">Scale In</div>
+                <div class="p-3 bg-success text-white rounded slide-in-right">Slide In</div>
+                <div class="p-3 bg-warning text-white rounded pulse">Pulse</div>
+                <div class="p-3 bg-danger text-white rounded bounce">Bounce</div>
+            </div>
+        </div>
+
+        <!-- Responsive Utilities Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Responsive Utilities</h2>
+
+            <div class="p-3 bg-light rounded mb-3">
+                <div class="text-base sm:text-lg md:text-xl lg:text-2xl">
+                    This text scales with screen size
+                </div>
+            </div>
+
+            <div class="p-3 bg-light rounded">
+                <div class="text-center">
+                    <span class="text-primary font-bold">Tip:</span>
+                    Resize your browser to see responsive classes in action (sm:, md:, lg:)
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Examples Section -->
+        <div class="demo-section rounded-lg shadow-lg m-3">
+            <h2 class="text-2xl font-bold mb-3">Interactive Examples</h2>
+
+            <div class="flex gap-3 flex-wrap justify-center">
+                <button class="btn btn-primary hover-lift focus-ring">
+                    Hover Lift + Focus Ring
+                </button>
+
+                <button class="btn btn-secondary hover-grow focus-ring">
+                    Hover Grow + Focus Ring
+                </button>
+
+                <button class="btn btn-success shake" onclick="this.classList.toggle('shake')">
+                    Click to Shake
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-5 p-4 bg-dark text-white rounded-lg">
+            <p class="text-lg font-bold mb-2">THE Framework - Enhanced CSS System</p>
+            <p class="text-sm opacity-75">
+                ✨ 500+ utility classes | 🎨 CSS Variables | 📱 Responsive | ♿ Accessible
+            </p>
+        </div>
+    </div>
+
+    <script>
+        console.log('✅ CSS Utilities Demo loaded!');
+        console.log('📦 Features demonstrated:');
+        console.log('  • Flexbox layout system');
+        console.log('  • Spacing scale (margins & padding)');
+        console.log('  • Color utilities (backgrounds & text)');
+        console.log('  • Typography system');
+        console.log('  • Border & shadow utilities');
+        console.log('  • Card components');
+        console.log('  • Button variations');
+        console.log('  • Loading indicators');
+        console.log('  • Animations');
+        console.log('  • Responsive utilities');
+        console.log('  • Interactive states');
+    </script>
+</body>
+</html>
